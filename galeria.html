@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GALERIA — SOLA Coffee カフェ</title>
+  <meta name="description" content="Galeria de fotos do Sola Coffee. Atmosfera, cafés especiais, confeitaria Yogashi e momentos únicos na Galeria La Belle, Águas Claras.">
+  <link rel="canonical" href="https://solacoffee.com.br/galeria.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Cafe",
+    "name": "Sola Coffee",
+    "telephone": "+55-61-99148-0675",
+    "email": "solacoffeework@gmail.com",
+    "url": "https://solacoffee.com.br",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua 24 Norte, Galeria La Belle, Loja 01",
+      "addressLocality": "Águas Claras",
+      "addressRegion": "DF",
+      "postalCode": "71916-750",
+      "addressCountry": "BR"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Inter:wght@300;400;500&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ============================================================
+       GALERIA — page-specific styles
+       ============================================================ */
+
+    /* HERO */
+    .galeria-hero {
+      padding: 140px 5rem 4rem;
+      background: var(--paper);
+      border-bottom: 1px solid var(--khaki-light);
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .galeria-hero-text { position: relative; z-index: 1; }
+    .galeria-hero-text h1 { font-size: 56px; margin-bottom: 0.75rem; }
+    .galeria-hero-text .lead {
+      font-size: 1rem;
+      color: var(--ink-muted);
+      max-width: 440px;
+      line-height: 1.75;
+    }
+
+
+    /* RESPONSIVO */
+    @media (max-width: 900px) {
+      .galeria-grid { columns: 2; }
+      .galeria-filters { padding: 1rem 1.5rem; }
+      .galeria-section { padding: 3rem 1.5rem 5rem; }
+      .galeria-hero { padding: 110px 1.5rem 3rem; }
+      .galeria-hero-text h1 { font-size: 40px; }
+      .galeria-cta { padding: 3.5rem 1.5rem; flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 560px) {
+      .galeria-grid { columns: 1; }
+      .galeria-hero-kanji { display: none; }
+      .lightbox-nav { display: none; }
+      .lightbox { padding: 1rem; }
+    }
+  </style>
+</head>
+<body class="page-galeria">
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo"><img src="img/logo.svg" alt="SOLA カフェ" class="nav-logo-img"></a>
+    <ul class="nav-links">
+      <li><a href="index.html">início</a></li>
+      <li><a href="menu.html">cardápio</a></li>
+      <li><a href="sobre.html">sobre</a></li>
+      <li><a href="galeria.html" class="active">galeria</a></li>
+      <li><a href="contato.html">contato</a></li>
+    </ul>
+  </nav>
+
+ <!-- INTRO -->
+  <section class="sobre-intro page-hero">
+    <div class="sobre-intro-text">
+      <span class="section-label"></span>
+      <h1 style="font-size:56px;">Galeria</h1>
+      <p class="lead">
+      </p>
+    </div>
+    </section>
+
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <div class="footer-logo">SOLA <span>カフェ</span></div>
+      </div>
+
+      <div class="footer-info">
+        <h4 class="footer-col-title">Contato</h4>
+        <ul class="footer-contact-list">
+          <li><a href="tel:+556199148-0675">(61) 99148-0675</a></li>
+          <li><a href="mailto:solacoffeework@gmail.com">solacoffeework@gmail.com</a></li>
+          <li><span>Rua 24 Norte, Galeria La Belle, Loja 01<br/>Águas Claras — Brasília, DF<br/>CEP 71916-750</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-info">
+        <h4 class="footer-col-title">Redes Sociais & Delivery</h4>
+        <ul class="footer-contact-list">
+          <li><a href="https://wa.me/5561991480675" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+          <li><a href="https://www.instagram.com/solacoffee.jp/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@solacoffeeco" target="_blank"><i class="fa-brands fa-tiktok"></i> TikTok</a></li>
+          <li><a href="https://www.ifood.com.br/delivery/brasilia-df/sola-coffee---cafe-japones-aguas-claras-norte/7c5102c2-471a-463c-b605-bb09772c8aca" target="_blank"><i class="fa-solid fa-bag-shopping"></i> Peça no IFood</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-nav">
+        <h4 class="footer-col-title">navegação</h4>
+        <ul class="footer-nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="menu.html">Cardápio</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Sola Coffee. Todos os direitos reservados. / Caroline Paiva de Queiroz Bragança / Diego Conceição Dourado</p>
+      <p>CNPJ: 50.381.677/0001-95</p>
+    </div>
+  </footer>
+
+  <script>
+    // ── DADOS dos itens (sincronizados com o HTML) ──
+    const items = Array.from(document.querySelectorAll('.gal-item'));
+
+    // ── FILTROS ──
+    const filterBtns = document.querySelectorAll('.gal-filter-btn');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        items.forEach(item => {
+          const match = filter === 'todos' || item.dataset.category === filter;
+          item.classList.toggle('hidden', !match);
+        });
+      });
+    });
+
+    // ── LIGHTBOX ──
+    const lightbox      = document.getElementById('lightbox');
+    const lightboxVisual = document.getElementById('lightboxVisual');
+    const lightboxTitle  = document.getElementById('lightboxTitle');
+    const lightboxCat    = document.getElementById('lightboxCat');
+    const lightboxCounter= document.getElementById('lightboxCounter');
+    const lightboxClose  = document.getElementById('lightboxClose');
+    const lightboxPrev   = document.getElementById('lightboxPrev');
+    const lightboxNext   = document.getElementById('lightboxNext');
+
+    let currentIndex = 0;
+
+    function getVisibleItems() {
+      return items.filter(i => !i.classList.contains('hidden'));
+    }
+
+    function openLightbox(index) {
+      const visible = getVisibleItems();
+      if (!visible[index]) return;
+      currentIndex = index;
+      const item = visible[index];
+
+      // Clone o placeholder para o lightbox
+      const placeholderClone = item.querySelector('.gal-placeholder').cloneNode(true);
+      lightboxVisual.innerHTML = '';
+      lightboxVisual.appendChild(placeholderClone);
+
+      lightboxTitle.textContent   = item.dataset.title;
+      lightboxCat.textContent     = item.dataset.category.charAt(0).toUpperCase() + item.dataset.category.slice(1);
+      lightboxCounter.textContent = `${index + 1} / ${visible.length}`;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function navigate(dir) {
+      const visible = getVisibleItems();
+      currentIndex = (currentIndex + dir + visible.length) % visible.length;
+      openLightbox(currentIndex);
+    }
+
+    // Abrir ao clicar
+    items.forEach((item, i) => {
+      item.addEventListener('click', () => {
+        const visible = getVisibleItems();
+        const visibleIndex = visible.indexOf(item);
+        if (visibleIndex >= 0) openLightbox(visibleIndex);
+      });
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', () => navigate(-1));
+    lightboxNext.addEventListener('click', () => navigate(1));
+
+    // Fechar clicando fora
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    // Teclado
+    document.addEventListener('keydown', e => {
+      if (!lightbox.classList.contains('open')) return;
+      if (e.key === 'Escape')      closeLightbox();
+      if (e.key === 'ArrowLeft')   navigate(-1);
+      if (e.key === 'ArrowRight')  navigate(1);
+    });
+
+    // Swipe no mobile
+    let touchStartX = 0;
+    lightbox.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
+    lightbox.addEventListener('touchend', e => {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) navigate(diff > 0 ? 1 : -1);
+    });
+  </script>
+
+</body>
+</html>

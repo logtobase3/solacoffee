@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CARDÁPIO — SOLA Coffee カフェ</title>
+
+    <meta name="description" content="Conheça o Sola Coffee na Galeria La Belle em Águas Claras. Cafés especiais, lanches deliciosos e ambiente aconchegante. Venha nos visitar ou peça no iFood!">
+  <link rel="canonical" href="https://solacoffee.com.br">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Cafe",
+    "name": "Sola Coffee",
+    "image": "https://solacoffee.com.brimages/logo.jpg",
+    "telephone": "+55-61-99148-0675",
+    "email": "solacoffeework@gmail.com",
+    "url": "https://solacoffee.com.br",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua 24 Norte, Galeria La Belle, Loja 01",
+      "addressLocality": "Águas Claras",
+      "addressRegion": "DF",
+      "postalCode": "71916-750",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": [
+      {"@type": "OpeningHoursSpecification","dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"],"opens": "12:30","closes": "19:30"},
+      {"@type": "OpeningHoursSpecification","dayOfWeek": "Saturday","opens": "09:30","closes": "20:00"},
+      {"@type": "OpeningHoursSpecification","dayOfWeek": "Sunday","opens": "09:30","closes": "14:00"}
+    ],
+    "sameAs": ["https://instagram.com","https://ifood.com.br"]
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <meta name="description" content="Cardápio do Sola Coffee em Águas Claras. Bebidas especiais, confeitaria yogashi, salgados artesanais.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Zen+Kaku+Gothic+New:wght@300;400&family=Shippori+Mincho:wght@400;500&family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Inter:wght@300;400;500&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-menu">
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo"><img src="img/logo.svg" alt="SOLA カフェ" class="nav-logo-img"></a>
+    <ul class="nav-links">
+      <li><a href="index.html">início</a></li>
+      <li><a href="menu.html" class="active">cardápio</a></li>
+      <li><a href="sobre.html">sobre</a></li>
+      <li><a href="galeria.html">galeria</a></li>
+      <li><a href="contato.html">contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="page-header">
+    <div class="page-header-content">
+      <span class="section-label"></span>
+      <h1 style="font-size:56px;">Nosso Cardápio</h1>
+      <p></p>
+    </div>
+  
+  </header>
+
+  <!-- FILTROS -->
+  <div class="menu-filters">
+    <button class="filter-btn active" onclick="filterMenu('todos', this)">todos</button>
+    <button class="filter-btn" onclick="filterMenu('bebidas quentes', this)">bebidas quentes</button>
+    <button class="filter-btn" onclick="filterMenu('bebidas geladas', this)">bebidas geladas</button>
+    <button class="filter-btn" onclick="filterMenu('confeitaria', this)">sobremesas</button>
+    <button class="filter-btn" onclick="filterMenu('cakes', this)">cakes</button>
+    <button class="filter-btn" onclick="filterMenu('salgados', this)">salgados</button>
+    <button class="filter-btn" onclick="filterMenu('especiais', this)">combos</button>
+  </div>
+
+  <!-- MENU GRID -->
+  <section class="menu-section">
+
+    <!-- BEBIDAS QUENTES -->
+    <div class="menu-category-header" data-cat="bebidas quentes">
+      <span class="cat-kanji"></span>
+      <h2>Bebidas Quentes</h2>
+      <div class="cat-line"></div>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-item" data-cat="bebidas quentes">
+        <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
+          <img src="cardapio/matchalatte.jpg" alt="Matcha Latte" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="item-info">
+          <h3>Matcha Latte</h3>
+          <p>O sabor herbal do chá verde japonês ao aconchego do leite vaporizado e cremoso.</p>
+          <div class="item-footer"><span class="tag-item">quente</span><span class="preco"></span></div>
+        </div>
+      </div>
+      <div class="menu-item" data-cat="bebidas quentes">
+        <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
+          <img src="cardapio/v60.jpg" alt="V60 Café Coado" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="item-info">
+          <h3>V60 Café Coado</h3>
+          <p>Café coado no método Hario V60, um grão especial de alta qualidade, moído e passado na hora.</p>
+          <div class="item-footer"><span class="tag-item">quente</span><span class="preco"></span></div>
+        </div>
+      </div>
+      <div class="menu-item" data-cat="bebidas quentes">
+        <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
+          <img src="cardapio/mocha.jpg" alt="Mocha" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="item-info">
+          <h3>Mocha</h3>
+          <p>Uma dose intensa de café espresso combinada com o conforto do leite vaporizado e uma rica calda de chocolate artesanal.</p>
+          <div class="item-footer"><span class="tag-item">quente</span><span class="preco"></span></div>
+        </div>
+      </div>
+      <div class="menu-item" data-cat="bebidas quentes">
+        <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
+          <img src="cardapio/cappuccino.jpg" alt="Cappuccino Tradicional" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="item-info">
+          <h3>Cappucciono Tradional</h3>
+          <p>Uma dose de café espresso extraída de grãos especiais de 88 pontos, combinada perfeitamente com a textura cremosa do leite vaporizado.</p>
+          <div class="item-footer"><span class="tag-item">quente</span><span class="preco"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BEBIDAS GELADAS -->
+    <div class="menu-category-header" data-cat="bebidas geladas">
+      <span class="cat-kanji"></span>
+      <h2>Bebidas Geladas</h2>
+      <div class="cat-line"></div>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-item" data-cat="bebidas geladas">
+        <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
+          <img src="cardapio/gingerbrew.jpg" alt="Ginger Brew" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="item-info">
+          <h3>Ginger Brew</h3>
+          <p>Um refrescante cold brew combinado com água tônica e xarope artesanal de gengibre.</p>
+          <div class="item-footer"><span class="tag-item">gelado</span><span class="preco"></span></div>
+        </div>
+      </div>
+      <div class="menu-item" data-cat="bebidas geladas">
+        <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
+          <img src="cardapio/icedmatchalatte.jpg" alt="Iced Matcha Latte" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="item-info">
+          <h3>Iced Matcha Latte</h3>
+          <p>A combinação refrescante do chá verde japonês com leite e gelo, servida em uma porção de 350ml.</p>
+          <div class="item-footer"><span class="tag-item">gelado</span><span class="preco"></span></div>
+        </div>
+      </div>
+      <div class="menu-item" data-cat="bebidas geladas">
+        <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
+          <img src="cardapio/ichigomatcha.jpg" alt="Ichigo Matcha" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="item-info">
+          <h3>Ichigo Matcha</h3>
+          <p>Matcha latte com pure de morango fresco em camadas.</p>
+          <div class="item-footer"><span class="tag-item">gelado</span><span class="preco"></span></div>
+        </div>
+      </div>
+      <div class="menu-item" data-cat="bebidas geladas">
+        <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
+          <img src="cardapio/icedlattecaramel.jpg" alt="Iced Latte Caramel" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="item-info">
+          <h3>Iced Latte Caramel</h3>
+          <p>A combinação refrescante de espresso, leite e gelo, enriquecida com o toque cremoso do cappuccino e o contraste do xarope de caramelo salgado.</p>
+          <div class="item-footer"><span class="tag-item">gelado</span><span class="preco"></span></div>
+        </div>
+      </div>
+      <div class="menu-item" data-cat="bebidas geladas">
+        <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
+          <img src="cardapio/icedmocha.jpg" alt="Iced Mocha" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="item-info">
+          <h3>Iced Mocha</h3>
+          <p>A combinação refrescante de espresso com leite, gelo e uma rica calda de chocolate artesanal, servida em uma porção de 350ml.</p>
+          <div class="item-footer"><span class="tag-item">gelado</span><span class="preco"></span></div>
+        </div>
+      </div>
+      <div class="menu-item" data-cat="bebidas geladas">
+        <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
+          <img src="cardapio/ichigosoda.jpg" alt="Ichigo Soda" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="item-info">
+          <h3>Ichigo Soda</h3>
+          <p>A combinação refrescante de água gaseificada e gelo com o sabor duplo do xarope aromatizado e do xarope natural de morango, servida em uma porção de 350ml.</p>
+          <div class="item-footer"><span class="tag-item">gelado</span><span class="preco"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAKES -->
+    <div class="menu-category-header" data-cat="cakes">
+      <span class="cat-kanji"></span>
+      <h2>Cakes</h2>
+      <div class="cat-line"></div>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-item" data-cat="cakes">
+        <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
+          <img src="cardapio/ichigocake.jpg" alt="Ichigo Cake" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="item-info">
+          <h3>Ichigo Cake</h3>
+          <p>Um bolo de pão de ló super leve e aerado, recheado com chantilly fresco e morangos.</p>
+          <div class="item-footer"><span class="tag-item">clássico</span><span class="preco"></span></div>
+        </div>
+      </div>
+      <div class="menu-item" data-cat="cakes">
+        <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
+          <img src="cardapio/cheesecakerasberry.jpg" alt="Cheesecake Redberry" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="item-info">
+          <h3>Cheesecake Redberry</h3>
+          <p>Cheesecake cremoso com cobertura de frutas vermelhas.</p>
+          <div class="item-footer"><span class="tag-item">SAZONAL</span><span class="preco"></span></div>
+        </div>
+      </div>
+      <div class="menu-item" data-cat="cakes">
+        <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
+          <img src="cardapio/coffeecake.jpg" alt="Coffeecake" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="item-info">
+          <h3>Coffeecake</h3>
+          <p>Um bolo de café com uma ganache de chocolate meio amargo.</p>
+          <div class="item-footer"><span class="tag-item">clássico</span><span class="preco"></span></div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- SOBREMESAS -->
+    <div class="menu-category-header" data-cat="confeitaria">
+      <span class="cat-kanji"></span>
+      <h2>Sobremesas</h2>
+      <div class="cat-line"></div>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-item" data-cat="confeitaria">
+        <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
+          <img src="cardapio/mochi.jpg" alt="Mochi Artesanal" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="item-info">
+          <h3>Mochi Artesanal</h3>
+          <p>Um bolinho tradicional japonês feito de massa de arroz glutinoso, famoso por sua textura incrivelmente macia e elástica.</p>
+          <div class="item-footer"><span class="tag-item">SAZONAL</span><span class="preco"></span></div>
+        </div>
+      </div>
+      <div class="menu-item" data-cat="confeitaria">
+        <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
+          <img src="img/image00003.jpeg" alt="Cookie de Matcha" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="item-info">
+          <h3>Cookie de Matcha</h3>
+          <p>Cookie de chá verde japonês com gotas puras de chocolate branco.</p>
+          <div class="item-footer"><span class="tag-item">CLÁSSICO</span><span class="preco"></span></div>
+        </div>
+      </div>
+      <div class="menu-item" data-cat="confeitaria">
+        <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
+          <img src="cardapio/chouxcream.jpg" alt="Choux Cream de Creme de Baunilha" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="item-info">
+          <h3>Choux Cream de Creme de Baunilha</h3>
+          <p>Uma versão japonesa da clássica carolina francesa, caracterizada por uma massa incrivelmente leve e crocante recheada com um creme suave e generoso.</p>
+          <div class="item-footer"><span class="tag-item">CLÁSSICO</span><span class="preco"></span></div>
+        </div>
+      </div>
+      <div class="menu-item" data-cat="confeitaria">
+        <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
+          <img src="cardapio/panacotaneko.jpg" alt="Panacota Neko" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="item-info">
+          <h3>Panacota Neko</h3>
+          <p>Uma sobremesa cremosa e delicada de panacota de leite tradicional, leite condensado e geleia incolor, finalizada com geleia de frutas vermelhas.</p>
+          <div class="item-footer"><span class="tag-item">CLÁSSICO</span><span class="preco"></span></div>
+        </div>
+      </div>
+      <div class="menu-item" data-cat="confeitaria">
+        <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
+          <img src="cardapio/perolasdemanga.jpg" alt="Pérolas de Manga" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="item-info">
+          <h3>Pérolas de Manga</h3>
+          <p>Sagu ao creme de manga, cobertura aveludada de cream cheese e cubinhos de manga fresca.</p>
+          <div class="item-footer"><span class="tag-item">SAZONAL</span><span class="preco"></span></div>
+        </div>
+      </div>
+     
+    </div>
+
+    <!-- SALGADOS -->
+    <div class="menu-category-header" data-cat="salgados">
+      <span class="cat-kanji"></span>
+      <h2>Salgados</h2>
+      <div class="cat-line"></div>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-item" data-cat="salgados">
+        <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
+          <img src="cardapio/sanduichedecroissant.jpg" alt="Sanduíche de Croissant" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="item-info">
+          <h3>Sanduíche de Croissant</h3>
+          <p>Um croissant folhado recheado com peito de peru, queijo muçarela derretido e o toque fresco da rúcula.</p>
+          <div class="item-footer"><span class="tag-item"></span><span class="preco"></span></div>
+        </div> 
+      </div>
+    
+
+      <div class="menu-item" data-cat="salgados">
+        <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
+          <img src="cardapio/onigiritradicional.jpg" alt="Onigiri Tradicional" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="item-info">
+          <h3>Onigiri Tradicional</h3>
+          <p>Bolinho de arroz sem recheio, temperado com shogoma e envolto em alga nori.</p>
+          <div class="item-footer"><span class="tag-item"></span><span class="preco"></span></div>
+        </div>
+      </div>
+
+      <div class="menu-item" data-cat="salgados">
+        <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
+          <img src="img/image00006.jpeg" alt="Onigiri de Atum e Maionese" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="item-info">
+          <h3>Onigiri de Atum e Maionese</h3>
+          <p>Bolinho de arroz japonês temperado com shogoma, recheado com patê de atum e maionese, envolto em alga nori.</p>
+          <div class="item-footer"><span class="tag-item"></span><span class="preco"></span></div>
+        </div>
+      </div>
+
+     </div>
+</div>
+    </div>
+
+    <!-- ESPECIAIS -->
+    <div class="menu-category-header" data-cat="especiais">
+      <span class="cat-kanji"></span>
+  
+      <h2>Combos</h2>
+      <div class="cat-line"></div>
+    </div>
+    <div class="menu-grid">
+      
+      <div class="menu-item" data-cat="especiais">
+        <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
+          <img src="cardapio/combo1.jpg" alt="Choux Cream + Matcha Mango" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+        <div class="item-info">
+          <h3>Choux Cream + Matcha Mango</h3>
+          <p>Uma choux cream tradicional recheada com creme de baunilha, acompanhada de um matcha mango gelado feito com leite e um creme de manga suave.</p>
+          <div class="item-footer"><span class="tag-item">combo</span><span class="preco"></span></div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <div class="footer-logo">SOLA <span>カフェ</span></div>
+      </div>
+
+      <div class="footer-info">
+        <h4 class="footer-col-title">Contato</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <a href="tel:+556199148-0675">(61) 99148-0675</a>
+          </li>
+          <li>
+            <a href="mailto:solacoffeework@gmail.com">solacoffeework@gmail.com</a>
+          </li>
+          <li>
+            <span>Rua 24 Norte, Galeria La Belle, Loja 01<br/>Águas Claras — Brasília, DF<br/>CEP 71916-750</span>
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="footer-info">
+        <h4 class="footer-col-title">Redes Sociais & Delivery</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <a href="https://wa.me/5561991480675" target="_blank">
+               <i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/solacoffee.jp/" target="_blank">
+              <i class="fa-brands fa-instagram"></i> Instagram</a>
+          </li>
+            <li>
+            <a href="https://www.tiktok.com/@solacoffeeco" target="_blank">
+              <i class="fa-brands fa-tiktok"></i> TikTok</a>
+          </li>
+          <li>
+            <a href="https://www.ifood.com.br/delivery/brasilia-df/sola-coffee---cafe-japones-aguas-claras-norte/7c5102c2-471a-463c-b605-bb09772c8aca" target="_blank">
+              <i class="fa-solid fa-bag-shopping"></i> Peça no IFood</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-nav">
+        <h4 class="footer-col-title">navegação</h4>
+        <ul class="footer-nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="menu.html">Cardápio</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Sola Coffee. Todos os direitos reservados. / Caroline Paiva de Queiroz Bragança / Diego Conceição Dourado</p>
+      <p>CNPJ: 50.381.677/0001-95</p>
+    </div>
+  </footer>
+
+
+
+  <script>
+    function filterMenu(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const items = document.querySelectorAll('.menu-item');
+      const headers = document.querySelectorAll('.menu-category-header');
+      const grids = document.querySelectorAll('.menu-grid');
+      if (cat === 'todos') {
+        items.forEach(i => i.style.display = '');
+        headers.forEach(h => h.style.display = '');
+        grids.forEach(g => g.style.display = '');
+      } else {
+        items.forEach(i => { i.style.display = i.dataset.cat === cat ? '' : 'none'; });
+        headers.forEach(h => { h.style.display = h.dataset.cat === cat ? '' : 'none'; });
+        grids.forEach(g => {
+          const hasVisible = [...g.querySelectorAll('.menu-item')].some(i => i.style.display !== 'none');
+          g.style.display = hasVisible ? '' : 'none';
+        });
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CONTATO — SOLA Coffee カフェ</title>
+  <meta name="description" content="Encontre o Sola Coffee em Águas Claras. Endereço, horários, telefone e redes sociais.">
+  <link rel="canonical" href="https://solacoffee.com.br/contato.html">
+
+
+   <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Cafe",
+    "name": "Sola Coffee",
+    "telephone": "+55-61-99148-0675",
+    "email": "solacoffeework@gmail.com",
+    "url": "https://solacoffee.com.br",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua 24 Norte, Galeria La Belle, Loja 01",
+      "addressLocality": "Águas Claras",
+      "addressRegion": "DF",
+      "postalCode": "71916-750",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": [
+      {"@type": "OpeningHoursSpecification","dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"],"opens": "12:30","closes": "19:30"},
+      {"@type": "OpeningHoursSpecification","dayOfWeek": "Saturday","opens": "09:30","closes": "20:00"},
+      {"@type": "OpeningHoursSpecification","dayOfWeek": "Sunday","opens": "09:30","closes": "14:00"}
+    ],
+    "sameAs": ["https://instagram.com","https://ifood.com.br"]
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Inter:wght@300;400;500&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    .info-block--no-icon {
+  grid-template-columns: 1fr;
+}
+.page-hero {
+  min-height: 340px;
+  box-sizing: border-box;
+  padding-top: 100px;
+  padding-bottom: 2.5rem;
+}
+
+    /* ═══════════════════════════════════════════
+       BODY — horários | contato+redes | mapa
+    ═══════════════════════════════════════════ */
+    .fc-content {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      border-bottom: 1px solid var(--khaki-light);
+    }
+    .fc-mapa-panel {
+      position: relative;
+      border-left: 1px solid var(--khaki-light);
+      overflow: hidden;
+    }
+    .fc-mapa-panel iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 600px;
+      border: 0;
+      display: block;
+      filter: saturate(0.85);
+    }
+
+    /* horários */
+    .fc-horarios-panel {
+      padding: 4.5rem 4.5rem 4.5rem 5rem;
+      border-right: 1px solid var(--khaki-light);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .fc-panel-label {
+      font-size: 9px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      font-family: var(--font-body);
+      color: var(--moss);
+      margin-bottom: 0.6rem;
+    }
+    .fc-horarios-panel h2 {
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    .fc-horarios-panel > p {
+      font-size: 13px;
+      color: var(--ink-muted);
+      margin-bottom: 2rem;
+    }
+    /* usa as classes existentes do site */
+    .fc-horarios-panel .horarios-tabela { max-width: 420px; margin-top: 0; }
+
+    /* redes */
+    .fc-redes-panel {
+      padding: 4.5rem 5rem 4.5rem 4.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .fc-redes-panel h2 {
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    .fc-redes-panel > p {
+      font-size: 13px;
+      color: var(--ink-muted);
+      margin-bottom: 2.5rem;
+    }
+    .fc-redes-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .fc-rede-item {
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+      padding: 1.1rem 1.4rem;
+      border: 1px solid var(--khaki-light);
+      border-radius: var(--radius-md);
+      background: var(--white);
+      text-decoration: none;
+      transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s;
+    }
+    .fc-rede-item:hover {
+      border-color: var(--moss-light);
+      box-shadow: var(--shadow-card);
+      transform: translateX(4px);
+    }
+    .fc-rede-icon {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--paper-warm);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 1rem;
+      color: var(--moss);
+      border: 1px solid var(--khaki-light);
+    }
+    .fc-rede-info { flex: 1; }
+    .fc-rede-name {
+      display: block;
+      font-size: 16px;
+      color: var(--ink);
+      line-height: 1.3;
+    }
+    .fc-rede-handle {
+      display: block;
+      font-size: 15px;
+      color: var(--ink-muted);
+      letter-spacing: 0.04em;
+    }
+    .fc-rede-arrow {
+      font-size: 11px;
+      color: var(--khaki-dark);
+      transition: color 0.2s, transform 0.2s;
+    }
+    .fc-rede-item:hover .fc-rede-arrow {
+      color: var(--moss);
+      transform: translateX(3px);
+    }
+
+    /* ═══════════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════════ */
+    @media (max-width: 960px) {
+      .fc-hero { grid-template-columns: 1fr; min-height: auto; }
+      .fc-hero-visual { display: none; }
+      .fc-hero-text { padding: 3.5rem 1.5rem 3rem; }
+      .fc-hero-text p { max-width: 100%; }
+
+      .fc-content { grid-template-columns: 1fr; }
+      .fc-mapa-panel { border-left: none; border-top: 1px solid var(--khaki-light); }
+      .fc-mapa-panel iframe { min-height: 300px; }
+      .fc-strip-item { border-right: none; border-bottom: 1px solid var(--khaki-light); padding: 2rem 1.5rem; }
+      .fc-strip-item:last-child { border-bottom: none; }
+
+      .fc-content { grid-template-columns: 1fr; }
+      .fc-horarios-panel {
+        padding: 3rem 1.5rem;
+        border-right: none;
+        border-bottom: 1px solid var(--khaki-light);
+      }
+      .fc-redes-panel { padding: 3rem 1.5rem; }
+
+      .fc-mapa iframe { height: 300px; }
+      .fc-mapa-badge { max-width: 220px; padding: 0.8rem 1rem; }
+    }
+
+    @media (max-width: 480px) {
+      .fc-hero-text { padding: 3rem 1.25rem 2.5rem; }
+      .fc-horarios-panel { padding: 2.5rem 1.25rem; }
+      .fc-redes-panel { padding: 2.5rem 1.25rem; }
+      .fc-strip-item { padding: 1.75rem 1.25rem; }
+    }
+  </style>
+</head>
+<body class="page-contato">
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo"><img src="img/logo.svg" alt="SOLA カフェ" class="nav-logo-img"></a>
+    <ul class="nav-links">
+      <li><a href="index.html">início</a></li>
+      <li><a href="menu.html">cardápio</a></li>
+      <li><a href="sobre.html">sobre</a></li>
+      <li><a href="galeria.html">galeria</a></li>
+      <li><a href="contato.html" class="active">contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- INTRO -->
+  <section class="sobre-intro page-hero">
+    <div class="sobre-intro-text">
+      <span class="section-label"></span>
+      <h1 style="font-size: 56px;">Fale Conosco</h1>
+      <p class="lead">
+        
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTATO + REDES | MAPA -->
+  <div class="fc-content">
+
+    <div class="fc-redes-panel">
+
+      <h2>Endereço & Contato</h2>
+      <p>Venha nos visitar!</p>
+      <div class="fc-redes-list" style="margin-bottom: 2.5rem;">
+        <a href="https://maps.google.com/?q=Sola+Coffee+Aguas+Claras" target="_blank" class="fc-rede-item">
+          <div class="fc-rede-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="fc-rede-info">
+            <span class="fc-rede-name">Galeria La Belle, Loja 01</span>
+            <span class="fc-rede-handle">Rua 24 Norte · Águas Claras, Brasília DF</span>
+          </div>
+          <i class="fa-solid fa-arrow-right fc-rede-arrow"></i>
+        </a>
+        <a href="tel:+5561991480675" class="fc-rede-item">
+          <div class="fc-rede-icon"><i class="fa-solid fa-phone"></i></div>
+          <div class="fc-rede-info">
+            <span class="fc-rede-name">(61) 99148-0675</span>
+            <span class="fc-rede-handle">WhatsApp disponível</span>
+          </div>
+          <i class="fa-solid fa-arrow-right fc-rede-arrow"></i>
+        </a>
+        <a href="mailto:solacoffeework@gmail.com" class="fc-rede-item">
+          <div class="fc-rede-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="fc-rede-info">
+            <span class="fc-rede-name">solacoffeework@gmail.com</span>
+            <span class="fc-rede-handle">Respondemos em até 24h</span>
+          </div>
+          <i class="fa-solid fa-arrow-right fc-rede-arrow"></i>
+        </a>
+      </div>
+
+      <h2>Redes Sociais & Delivery</h2>
+      <p>Nos acompanhe e peça pelo delivery.</p>
+      <div class="fc-redes-list">
+        <a href="https://wa.me/5561991480675" target="_blank" class="fc-rede-item">
+          <div class="fc-rede-icon"><i class="fa-brands fa-whatsapp"></i></div>
+          <div class="fc-rede-info">
+            <span class="fc-rede-name">WhatsApp</span>
+            <span class="fc-rede-handle">(61) 99148-0675</span>
+          </div>
+          <i class="fa-solid fa-arrow-right fc-rede-arrow"></i>
+        </a>
+        <a href="https://www.instagram.com/solacoffee.jp/" target="_blank" class="fc-rede-item">
+          <div class="fc-rede-icon"><i class="fa-brands fa-instagram"></i></div>
+          <div class="fc-rede-info">
+            <span class="fc-rede-name">Instagram</span>
+            <span class="fc-rede-handle">@solacoffee.jp</span>
+          </div>
+          <i class="fa-solid fa-arrow-right fc-rede-arrow"></i>
+        </a>
+        <a href="https://www.tiktok.com/@solacoffeeco" target="_blank" class="fc-rede-item">
+          <div class="fc-rede-icon"><i class="fa-brands fa-tiktok"></i></div>
+          <div class="fc-rede-info">
+            <span class="fc-rede-name">TikTok</span>
+            <span class="fc-rede-handle">@solacoffeeco</span>
+          </div>
+          <i class="fa-solid fa-arrow-right fc-rede-arrow"></i>
+        </a>
+        <a href="https://www.ifood.com.br/delivery/brasilia-df/sola-coffee---cafe-japones-aguas-claras-norte/7c5102c2-471a-463c-b605-bb09772c8aca" target="_blank" class="fc-rede-item">
+          <div class="fc-rede-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+          <div class="fc-rede-info">
+            <span class="fc-rede-name">iFood</span>
+            <span class="fc-rede-handle">Peça pelo delivery</span>
+          </div>
+          <i class="fa-solid fa-arrow-right fc-rede-arrow"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="fc-mapa-panel">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15353.13470171583!2d-48.02756208214473!3d-15.84168103660788!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3b9d3fa3dd75%3A0xfc180d4a1cdd393c!2sSola%20Coffee%20-%20Cafeteria%20japonesa!5e0!3m2!1spt-BR!2sbr!4v1779202179430!5m2!1spt-BR!2sbr"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Localização do Sola Coffee em Águas Claras, Brasília">
+      </iframe>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">SOLA <span>カフェ</span></div>
+      </div>
+      <div class="footer-info">
+        <h4 class="footer-col-title">Contato</h4>
+        <ul class="footer-contact-list">
+          <li><a href="tel:+556199148-0675">(61) 99148-0675</a></li>
+          <li><a href="mailto:solacoffeework@gmail.com">solacoffeework@gmail.com</a></li>
+          <li><span>Rua 24 Norte, Galeria La Belle, Loja 01<br/>Águas Claras — Brasília, DF<br/>CEP 71916-750</span></li>
+        </ul>
+      </div>
+      <div class="footer-info">
+        <h4 class="footer-col-title">Redes Sociais & Delivery</h4>
+        <ul class="footer-contact-list">
+          <li><a href="https://wa.me/5561991480675" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+          <li><a href="https://www.instagram.com/solacoffee.jp/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@solacoffeeco" target="_blank"><i class="fa-brands fa-tiktok"></i> TikTok</a></li>
+          <li><a href="https://www.ifood.com.br/delivery/brasilia-df/sola-coffee---cafe-japones-aguas-claras-norte/7c5102c2-471a-463c-b605-bb09772c8aca" target="_blank"><i class="fa-solid fa-bag-shopping"></i> Peça no IFood</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav">
+        <h4 class="footer-col-title">navegação</h4>
+        <ul class="footer-nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="menu.html">Cardápio</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Sola Coffee. Todos os direitos reservados. / Caroline Paiva de Queiroz Bragança / Diego Conceição Dourado</p>
+      <p>CNPJ: 50.381.677/0001-95</p>
+    </div>
+  </footer>
+
+</body>
+</html>
