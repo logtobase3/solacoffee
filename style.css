@@ -1010,6 +1010,8 @@ min-height: 100vh;
   .hero { grid-template-columns: 1fr; min-height: auto; }
   .hero-visual { display: none; }
   .hero-content { padding: 2.5rem 1.5rem 3.5rem; padding-top: 100px; }
+  .hero-title { font-size: 2.6rem; }
+  .hero-sub { max-width: 100%; text-align: left; text-align-last: left; font-size: 0.95rem; margin-bottom: 2rem; }
   .hero-cta-row { flex-direction: column; align-items: stretch; gap: 0.8rem; }
   .hero-cta-row .btn-primary { text-align: center; }
 
@@ -1018,7 +1020,7 @@ min-height: 100vh;
   .destaques-grid { grid-template-columns: 1fr; }
 
   /* [index.html] — WABI */
-  .wabi { grid-template-columns: 1fr; }
+  .wabi { grid-template-columns: 1fr; border-top: 1px solid var(--khaki-light); min-height: auto; }
   .wabi-left { display: block; height: 260px; position: relative; }
   .wabi-photo-frame { position: absolute; inset: 1rem; }
   .wabi--flip .wabi-left .wabi-photo-frame { inset: 1rem; }
@@ -1028,7 +1030,7 @@ min-height: 100vh;
 
   /* [index.html] — DIFERENCIAIS */
   .diferenciais-grid { grid-template-columns: 1fr !important; }
-  .valores { padding: 4rem 1.5rem; }
+  .valores { padding: 4rem 1.5rem; border-top: 1px solid var(--khaki-light); }
 
   /* [index.html] — FOOTER */
   .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; padding: 3rem 1.5rem 2.5rem; }
