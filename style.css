@@ -1044,6 +1044,7 @@ min-height: 100vh;
   .wabi-right { padding: 2rem 1.5rem 3rem; order: 2; }
   /* wabi--flip: foto também fica antes do texto no mobile */
   .wabi--flip .wabi-left { order: 1; height: 240px; }
+  .wabi--flip .wabi-left .wabi-photo-frame { inset: 1rem; }
   .wabi--flip .wabi-right { order: 2; padding: 2rem 1.5rem 3rem; }
 
   /* [index.html] — DIFERENCIAIS */
