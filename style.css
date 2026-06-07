@@ -1008,12 +1008,38 @@ min-height: 100vh;
   .nav-links a { font-size: 10px; }
 
   /* [index.html] — HERO */
-  .hero { grid-template-columns: 1fr; min-height: auto; }
-  .hero-visual { display: none; }
-  .hero-content { padding: 2.5rem 1.5rem 3rem; padding-top: 100px; }
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-visual {
+    display: flex;
+    order: 1;
+    min-height: 52vw;
+    max-height: 340px;
+    height: 310px;
+    padding-top: 60px;
+  }
+  .hero-content {
+    order: 2;
+    padding: 2rem 1.5rem 3rem;
+    padding-top: 2rem;
+  }
   .hero-title { font-size: 2.6rem; }
-  .hero-sub { max-width: 100%; text-align: left; text-align-last: left; font-size: 0.95rem; margin-bottom: 2rem; }
-  .hero-cta-row { display: none; }
+  .hero-sub {
+    max-width: 100%;
+    text-align: left;
+    text-align-last: left;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+  .hero-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 
   /* [index.html] — DESTAQUES carrossel */
   .destaque-card:hover { transform: none; box-shadow: none; }
@@ -1051,6 +1077,7 @@ min-height: 100vh;
   .diferenciais-grid { grid-template-columns: 1fr !important; }
   .valores > div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
   .valores { padding: 3.5rem 1.5rem; border-top: 1px solid var(--khaki-light); }
+  .valores .fc-rede-item { padding: 1.2rem 1rem; margin: 0; width: 100%; box-sizing: border-box; }
 
   /* [index.html] — FOOTER */
   .footer-top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.5rem 2.5rem; }
