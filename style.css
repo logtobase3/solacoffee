@@ -1069,8 +1069,9 @@ min-height: 100vh;
   /* [index.html] — DIFERENCIAIS */
   .diferenciais-grid { grid-template-columns: 1fr !important; }
   .valores > div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
-  .valores { padding: 3.5rem 1.5rem; border-top: 1px solid var(--khaki-light); }
+  .valores { padding: 3.5rem 1.5rem; border-top: 1px solid var(--khaki-light); display: flex; flex-direction: column; }
   .valores .fc-rede-item { margin: 0; width: 100%; box-sizing: border-box; }
+  .diferenciais-grid { width: 100%; }
 
   /* [index.html] — FOOTER */
   .footer-top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.5rem 2.5rem; }
