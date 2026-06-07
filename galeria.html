@@ -125,7 +125,7 @@
           <li><a href="https://wa.me/5561991480675" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
           <li><a href="https://www.instagram.com/solacoffee.jp/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
           <li><a href="https://www.tiktok.com/@solacoffeeco" target="_blank"><i class="fa-brands fa-tiktok"></i> TikTok</a></li>
-          <li><a href="https://www.ifood.com.br/delivery/brasilia-df/sola-coffee---cafe-japones-aguas-claras-norte/7c5102c2-471a-463c-b605-bb09772c8aca" target="_blank"><i class="fa-solid fa-bag-shopping"></i> Peça no IFood</a></li>
+          <li><a href="https://www.ifood.com.br/delivery/brasilia-df/sola-coffee---cafe-japones-aguas-claras-norte/7c5102c2-471a-463c-b605-bb09772c8aca" target="_blank"><i class="fa-solid fa-bag-shopping"></i> Peça no iFood</a></li>
         </ul>
       </div>
 
@@ -148,103 +148,6 @@
     </div>
   </footer>
 
-  <script>
-    // ── DADOS dos itens (sincronizados com o HTML) ──
-    const items = Array.from(document.querySelectorAll('.gal-item'));
-
-    // ── FILTROS ──
-    const filterBtns = document.querySelectorAll('.gal-filter-btn');
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.dataset.filter;
-        items.forEach(item => {
-          const match = filter === 'todos' || item.dataset.category === filter;
-          item.classList.toggle('hidden', !match);
-        });
-      });
-    });
-
-    // ── LIGHTBOX ──
-    const lightbox      = document.getElementById('lightbox');
-    const lightboxVisual = document.getElementById('lightboxVisual');
-    const lightboxTitle  = document.getElementById('lightboxTitle');
-    const lightboxCat    = document.getElementById('lightboxCat');
-    const lightboxCounter= document.getElementById('lightboxCounter');
-    const lightboxClose  = document.getElementById('lightboxClose');
-    const lightboxPrev   = document.getElementById('lightboxPrev');
-    const lightboxNext   = document.getElementById('lightboxNext');
-
-    let currentIndex = 0;
-
-    function getVisibleItems() {
-      return items.filter(i => !i.classList.contains('hidden'));
-    }
-
-    function openLightbox(index) {
-      const visible = getVisibleItems();
-      if (!visible[index]) return;
-      currentIndex = index;
-      const item = visible[index];
-
-      // Clone o placeholder para o lightbox
-      const placeholderClone = item.querySelector('.gal-placeholder').cloneNode(true);
-      lightboxVisual.innerHTML = '';
-      lightboxVisual.appendChild(placeholderClone);
-
-      lightboxTitle.textContent   = item.dataset.title;
-      lightboxCat.textContent     = item.dataset.category.charAt(0).toUpperCase() + item.dataset.category.slice(1);
-      lightboxCounter.textContent = `${index + 1} / ${visible.length}`;
-      lightbox.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeLightbox() {
-      lightbox.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-
-    function navigate(dir) {
-      const visible = getVisibleItems();
-      currentIndex = (currentIndex + dir + visible.length) % visible.length;
-      openLightbox(currentIndex);
-    }
-
-    // Abrir ao clicar
-    items.forEach((item, i) => {
-      item.addEventListener('click', () => {
-        const visible = getVisibleItems();
-        const visibleIndex = visible.indexOf(item);
-        if (visibleIndex >= 0) openLightbox(visibleIndex);
-      });
-    });
-
-    lightboxClose.addEventListener('click', closeLightbox);
-    lightboxPrev.addEventListener('click', () => navigate(-1));
-    lightboxNext.addEventListener('click', () => navigate(1));
-
-    // Fechar clicando fora
-    lightbox.addEventListener('click', e => {
-      if (e.target === lightbox) closeLightbox();
-    });
-
-    // Teclado
-    document.addEventListener('keydown', e => {
-      if (!lightbox.classList.contains('open')) return;
-      if (e.key === 'Escape')      closeLightbox();
-      if (e.key === 'ArrowLeft')   navigate(-1);
-      if (e.key === 'ArrowRight')  navigate(1);
-    });
-
-    // Swipe no mobile
-    let touchStartX = 0;
-    lightbox.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
-    lightbox.addEventListener('touchend', e => {
-      const diff = touchStartX - e.changedTouches[0].clientX;
-      if (Math.abs(diff) > 50) navigate(diff > 0 ? 1 : -1);
-    });
-  </script>
-
+ 
 </body>
 </html>
