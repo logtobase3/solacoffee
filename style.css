@@ -1114,27 +1114,8 @@ min-height: 100vh;
     scroll-snap-align: start;
   }
 
-  /* dots */
-  .carousel-dots {
-    display: flex;
-    justify-content: center;
-    gap: 6px;
-    padding: 0.5rem 0 1rem;
-  }
-  .carousel-dot {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: var(--khaki-dark);
-    transition: background 0.3s, transform 0.3s;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-  }
-  .carousel-dot.active {
-    background: var(--moss);
-    transform: scale(1.35);
-  }
+  /* dots ocultos */
+  .carousel-dots { display: none; }
 
   /* SOBRE */
   .sobre-intro { padding: 100px 1.5rem 2.5rem; grid-template-columns: 1fr; }
