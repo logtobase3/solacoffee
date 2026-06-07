@@ -85,7 +85,8 @@
       <h2>Bebidas Quentes</h2>
       <div class="cat-line"></div>
     </div>
-    <div class="menu-grid">
+    <div class="menu-carousel-wrap">
+    <div class="menu-grid" data-carousel>
       <div class="menu-item" data-cat="bebidas quentes">
         <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
           <img src="cardapio/matchalatte.jpg" alt="Matcha Latte" style="width:100%;height:100%;object-fit:cover;display:block;">
@@ -127,6 +128,8 @@
         </div>
       </div>
     </div>
+    <div class="carousel-dots" data-dots></div>
+    </div>
 
     <!-- BEBIDAS GELADAS -->
     <div class="menu-category-header" data-cat="bebidas geladas">
@@ -134,7 +137,8 @@
       <h2>Bebidas Geladas</h2>
       <div class="cat-line"></div>
     </div>
-    <div class="menu-grid">
+    <div class="menu-carousel-wrap">
+    <div class="menu-grid" data-carousel>
       <div class="menu-item" data-cat="bebidas geladas">
         <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
           <img src="cardapio/gingerbrew.jpg" alt="Ginger Brew" style="width:100%;height:100%;object-fit:cover;display:block;">
@@ -196,6 +200,8 @@
         </div>
       </div>
     </div>
+    <div class="carousel-dots" data-dots></div>
+    </div>
 
     <!-- CAKES -->
     <div class="menu-category-header" data-cat="cakes">
@@ -203,7 +209,8 @@
       <h2>Cakes</h2>
       <div class="cat-line"></div>
     </div>
-    <div class="menu-grid">
+    <div class="menu-carousel-wrap">
+    <div class="menu-grid" data-carousel>
       <div class="menu-item" data-cat="cakes">
         <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
           <img src="cardapio/ichigocake.jpg" alt="Ichigo Cake" style="width:100%;height:100%;object-fit:cover;display:block;">
@@ -234,7 +241,8 @@
           <div class="item-footer"><span class="tag-item">clássico</span><span class="preco"></span></div>
         </div>
       </div>
-      
+    </div>
+    <div class="carousel-dots" data-dots></div>
     </div>
 
     <!-- SOBREMESAS -->
@@ -243,7 +251,8 @@
       <h2>Sobremesas</h2>
       <div class="cat-line"></div>
     </div>
-    <div class="menu-grid">
+    <div class="menu-carousel-wrap">
+    <div class="menu-grid" data-carousel>
       <div class="menu-item" data-cat="confeitaria">
         <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
           <img src="cardapio/mochi.jpg" alt="Mochi Artesanal" style="width:100%;height:100%;object-fit:cover;display:block;">
@@ -294,7 +303,8 @@
           <div class="item-footer"><span class="tag-item">SAZONAL</span><span class="preco"></span></div>
         </div>
       </div>
-     
+    </div>
+    <div class="carousel-dots" data-dots></div>
     </div>
 
     <!-- SALGADOS -->
@@ -303,7 +313,8 @@
       <h2>Salgados</h2>
       <div class="cat-line"></div>
     </div>
-    <div class="menu-grid">
+    <div class="menu-carousel-wrap">
+    <div class="menu-grid" data-carousel>
       <div class="menu-item" data-cat="salgados">
         <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
           <img src="cardapio/sanduichedecroissant.jpg" alt="Sanduíche de Croissant" style="width:100%;height:100%;object-fit:cover;display:block;">
@@ -314,7 +325,6 @@
           <div class="item-footer"><span class="tag-item"></span><span class="preco"></span></div>
         </div> 
       </div>
-    
 
       <div class="menu-item" data-cat="salgados">
         <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
@@ -337,9 +347,8 @@
           <div class="item-footer"><span class="tag-item"></span><span class="preco"></span></div>
         </div>
       </div>
-
-     </div>
-</div>
+    </div>
+    <div class="carousel-dots" data-dots></div>
     </div>
 
     <!-- ESPECIAIS -->
@@ -349,8 +358,8 @@
       <h2>Combos</h2>
       <div class="cat-line"></div>
     </div>
-    <div class="menu-grid">
-      
+    <div class="menu-carousel-wrap">
+    <div class="menu-grid" data-carousel>
       <div class="menu-item" data-cat="especiais">
         <div class="item-visual" style="padding:0;overflow:hidden;height:auto;aspect-ratio:600/550;">
           <img src="cardapio/combo1.jpg" alt="Choux Cream + Matcha Mango" style="width:100%;height:100%;object-fit:cover;display:block;">
@@ -361,6 +370,8 @@
           <div class="item-footer"><span class="tag-item">combo</span><span class="preco"></span></div>
         </div>
       </div>
+    </div>
+    <div class="carousel-dots" data-dots></div>
     </div>
 
   </section>
@@ -433,22 +444,67 @@
 
 
   <script>
+    /* ---- CARROSSEL MOBILE: dots ativos via scroll ---- */
+    function initCarousels() {
+      if (window.innerWidth > 768) return;
+      document.querySelectorAll('[data-carousel]').forEach(grid => {
+        const wrap = grid.closest('.menu-carousel-wrap');
+        const dotsContainer = wrap ? wrap.querySelector('[data-dots]') : null;
+        if (!dotsContainer) return;
+
+        const items = grid.querySelectorAll('.menu-item');
+        if (items.length <= 1) return;
+
+        // Cria dots
+        dotsContainer.innerHTML = '';
+        items.forEach((_, i) => {
+          const dot = document.createElement('button');
+          dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+          dot.setAttribute('aria-label', 'Item ' + (i + 1));
+          dot.addEventListener('click', () => {
+            items[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+          });
+          dotsContainer.appendChild(dot);
+        });
+
+        // Atualiza dot ativo no scroll
+        const dots = dotsContainer.querySelectorAll('.carousel-dot');
+        grid.addEventListener('scroll', () => {
+          const scrollLeft = grid.scrollLeft;
+          const itemWidth = items[0].offsetWidth + parseInt(getComputedStyle(grid).gap || 16);
+          const active = Math.round(scrollLeft / itemWidth);
+          dots.forEach((d, i) => d.classList.toggle('active', i === active));
+        }, { passive: true });
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', initCarousels);
+    window.addEventListener('resize', initCarousels);
+  </script>
+
+  <script>
     function filterMenu(cat, btn) {
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       const items = document.querySelectorAll('.menu-item');
       const headers = document.querySelectorAll('.menu-category-header');
       const grids = document.querySelectorAll('.menu-grid');
+      const wraps = document.querySelectorAll('.menu-carousel-wrap');
       if (cat === 'todos') {
         items.forEach(i => i.style.display = '');
         headers.forEach(h => h.style.display = '');
         grids.forEach(g => g.style.display = '');
+        wraps.forEach(w => w.style.display = '');
       } else {
         items.forEach(i => { i.style.display = i.dataset.cat === cat ? '' : 'none'; });
         headers.forEach(h => { h.style.display = h.dataset.cat === cat ? '' : 'none'; });
         grids.forEach(g => {
           const hasVisible = [...g.querySelectorAll('.menu-item')].some(i => i.style.display !== 'none');
           g.style.display = hasVisible ? '' : 'none';
+        });
+        wraps.forEach(w => {
+          const g = w.querySelector('.menu-grid');
+          w.style.display = g && g.style.display !== 'none' ? '' : 'none';
         });
       }
     }
