@@ -1144,6 +1144,7 @@ min-height: 100vh;
     padding: 0.5rem 1.5rem 1rem;
     scrollbar-width: none;
     scroll-behavior: smooth;
+    scroll-padding-left: 1.5rem;
   }
   .menu-grid::-webkit-scrollbar { display: none; }
   .menu-grid .menu-item {
@@ -1151,6 +1152,8 @@ min-height: 100vh;
     max-width: 300px;
     scroll-snap-align: start;
   }
+  .menu-grid .menu-item:first-child { margin-left: 1.5rem; }
+  .menu-grid .menu-item:last-child  { margin-right: 1.5rem; }
 
   /* dots ocultos */
   .carousel-dots { display: none; }
