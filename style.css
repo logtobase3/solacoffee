@@ -1071,7 +1071,7 @@ min-height: 100vh;
 
   /* [index.html] — DIFERENCIAIS (Espaço para todos) */
   .valores {
-    padding: 2.5rem 1.5rem 4rem !important;
+    padding: 4rem 1.5rem 4rem !important;
     border-top: 1px solid var(--khaki-light);
     display: flex;
     flex-direction: column;
