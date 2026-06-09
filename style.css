@@ -1377,3 +1377,181 @@ min-height: 100vh;
   margin-bottom: 1rem;
   line-height: 1.2;
 }
+
+
+/* CSS DA GALERIA */
+
+
+.galeria-section {
+  padding: 4rem 5rem 6rem;
+  background: var(--paper); /* Mantém o fundo off-white do site */
+}
+
+.galeria-grid-editorial {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 280px;
+  grid-auto-flow: dense; /* Faz os blocos menores preencherem os espaços vazios */
+  gap: 24px; /* Espaçamento generoso (widespace) */
+}
+
+/* Modificadores de tamanho para criar a assimetria */
+.gal-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--khaki-light);
+  background: var(--white);
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s;
+}
+
+.gal-item.tall {
+  grid-row: span 2; /* Ocupa duas linhas verticais */
+}
+
+.gal-item.wide {
+  grid-column: span 2; /* Ocupa duas colunas horizontais */
+}
+
+/* Container interno e imagem */
+.gal-placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+.gal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Efeito Hover Minimalista  */
+.gal-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-deep);
+}
+
+.gal-item:hover .gal-img {
+  transform: scale(1.04); /* Zoom suave e sofisticado */
+}
+
+/* Filtro de ocultação do script */
+.gal-item.hidden {
+  display: none !important;
+}
+
+/* Paginação */
+.galeria-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 4rem;
+}
+
+.pagination-btn {
+  width: 32px;
+  height: 32px;
+  font-size: 12px;
+  color: var(--ink-muted);
+  border: 1px solid var(--khaki-light);
+  border-radius: var(--radius-sm);
+  transition: all 0.2s;
+}
+
+.pagination-btn.active, .pagination-btn:hover {
+  background: var(--ink);
+  color: var(--white);
+  border-color: var(--ink);
+}
+
+/* LIGHTBOX (Janela de Visualização) */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(38, 38, 38, 0.96); /* Escuro translúcido */
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox-content {
+  max-width: 900px;
+  width: 100%;
+  background: var(--paper);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  animation: fadeUp 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+
+#lightboxVisual {
+  max-height: 70vh;
+  background: #000;
+  overflow: hidden;
+}
+
+#lightboxVisual .gal-img {
+  max-height: 70vh;
+  width: 100%;
+  object-fit: contain;
+}
+
+.lightbox-meta {
+  padding: 1.5rem 2rem;
+  position: relative;
+}
+
+.lightbox-counter {
+  position: absolute;
+  right: 2rem;
+  bottom: 1.5rem;
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+
+/* Botões do Lightbox */
+.lightbox-close {
+  position: absolute;
+  top: 1.5rem; right: 1.5rem;
+  font-size: 2.5rem;
+  color: var(--paper);
+  z-index: 1010;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--paper);
+  font-size: 1.5rem;
+  padding: 1rem;
+  z-index: 1010;
+}
+.lightbox-nav.prev { left: 1rem; }
+.lightbox-nav.next { right: 1rem; }
+
+/* AJUSTES RESPONSIVOS ADICIONAIS */
+@media (max-width: 900px) {
+  .galeria-section { padding: 3rem 1.5rem 5rem; }
+  .galeria-grid-editorial { 
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-auto-rows: 220px;
+    gap: 16px;
+  }
+  .gal-item.wide { grid-column: span 1; } 
+}
+
+@media (max-width: 560px) {
+  .galeria-grid-editorial { 
+    grid-template-columns: 1fr; 
+    grid-auto-rows: auto;
+  }
+  .gal-item.tall { grid-row: span 1; }
+}
